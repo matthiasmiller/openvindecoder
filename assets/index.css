@@ -1,0 +1,9 @@
+label {
+    font-weight: bold;
+}
+input, button {
+    font-size: 120%;
+}
+button {
+    font-weight: bold;
+}
