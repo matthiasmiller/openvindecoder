@@ -30,9 +30,15 @@ $(function()
             var elParent = document.getElementById('results');
             elParent.innerHTML = '';
 
+            var elHeading = elParent.appendChild(document.createElement('H1'));
+            elHeading.id = 'results-heading';
+            elHeading.appendChild(document.createTextNode('Results for ' + data.SearchCriteria.replace(/:/g, ' ')));
             appendText('Message', data.Message);
-            for (var i = 0; i < data.Results.length; i++)
-                appendText(data.Results[i].Variable, data.Results[i].Value);
+            for (var i = 0; i < data.Results.length; i++) {
+                var result = data.Results[i];
+                if (result.Value !== null)
+                    appendText(result.Variable, result.Value);
+            }
         });
     }
 });

@@ -7,3 +7,6 @@ input, button {
 button {
     font-weight: bold;
 }
+#results-heading {
+    margin-top: 1.25em;
+}
